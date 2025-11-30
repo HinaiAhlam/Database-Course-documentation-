@@ -204,3 +204,190 @@ Transform raw data into meaningful information for decision-making.
 Focus: Analytics, reporting, dashboards, data warehousing.
 
 Output: Business insights and data-driven decision tools.
+
+
+
+Types of Databases
+Relational vs Non-Relational (NoSQL) Databases
+✅ Relational Databases
+
+Data is stored in tables (rows and columns), with a fixed/predefined schema. 
+GeeksforGeeks
++2
+GeeksforGeeks
++2
+
+Use SQL (Structured Query Language) to query and manipulate data. 
+GeeksforGeeks
++1
+
+Support ACID properties (Atomicity, Consistency, Isolation, Durability), which ensures reliable, consistent transactions — important when data integrity is critical. 
+insightsoftware
++1
+
+Great for structured, relational data — where entities relate to each other (e.g. customers, orders, invoices, relationships). 
+GeeksforGeeks
++1
+
+When relational DBs shine:
+
+Financial/ banking systems (transactions must be consistent)
+
+Enterprise resource planning (ERP) / Customer Relationship Management (CRM)
+
+Systems needing complex queries, joins across tables, strong consistency
+✅ Non-Relational (NoSQL) Databases
+
+Data is stored using flexible models — e.g. document-oriented (like JSON), key-value, wide-column, graph, etc. 
+ProCoders
++2
+GeeksforGeeks
++2
+
+Schema is dynamic / schema-less, which allows fields to vary across records — good for evolving data. 
+GeeksforGeeks
++2
+AppMaster
++2
+
+Typically favor horizontal scalability, distributing data across many machines/servers rather than scaling up a single server. 
+AppMaster
++2
+GeeksforGeeks
++2
+
+May trade off the strictness of ACID (some use eventual consistency or tunable consistency) in favor of scalability, flexibility, and performance. 
+AppMaster
++2
+Wallarm
++2
+
+Examples:
+
+MongoDB – a document store using BSON (binary JSON) documents; good for unstructured / varying data. 
+Amazon Web Services, Inc.
++2
+GeeksforGeeks
++2
+
+Apache Cassandra – a wide-column (column-family) store, optimized for large-scale data across many servers, high write throughput. 
+GeeksforGeeks
++2
+Wikipedia
++2
+
+When NoSQL shines:
+
+Applications with rapidly evolving data structures (e.g. user profiles, product catalogs, metadata)
+
+High-traffic web apps, social media, content management systems
+
+Big data ingest, analytics, log storage, IoT data, where you expect large volumes and flexible schema
+
+🛠 Centralized vs Distributed vs Cloud Databases
+
+These terms describe how and where the database is deployed / stored (architecture), rather than strictly the data model (SQL vs NoSQL).
+
+
+
+📍 Centralized Database
+
+All data resides on a single server or location (e.g. a central server, mainframe, on-premises machine). 
+Wikipedia
++2
+GeeksforGeeks
++2
+
+Advantages: easier to manage, simpler backups, data consistency (single source), minimal duplication. 
+GeeksforGeeks
++1
+
+Disadvantages: Scalability is limited (can only scale by upgrading hardware), single point of failure (if server crashes — data inaccessible), performance bottleneck with many users. 
+Wikipedia
++2
+Educative
++2
+
+Use cases:
+
+Small to medium-size organizations where data size is modest and workload is limited
+
+Environments where strong consistency, central control, and simplicity are more important than large-scale distribution (e.g. small business ERP, local desktop applications, small internal systems)
+
+🌐 Distributed Database
+
+Data is spread across multiple servers or physical locations (nodes), often connected via network. The system manages distribution so that to the user it behaves as a single database. 
+Wikipedia
++2
+TechTarget
++2
+
+Advantages: Scalable horizontally (add more servers instead of upgrading one), higher availability and fault tolerance (if one node fails, others continue), better performance for geographically distributed users (data can be placed closer to users). 
+Oracle
++2
+Wikipedia
++2
+
+Disadvantages: more complex to manage, harder to guarantee global consistency, data synchronization & replication overhead, more costly infrastructure. 
+Educative
++2
+Kurukshetra University
++2
+
+Use cases:
+
+Large-scale systems needing to serve many users across different regions (global apps, multi-region services)
+
+High-availability systems where downtime must be minimized (e.g. streaming services, global e-commerce, real-time analytics)
+
+Big data systems, or systems needing to scale out as data volume grows
+
+Examples of distributed databases:
+
+Apache Cassandra — widely used for distributed, fault-tolerant data storage. 
+TechTarget
++1
+
+Apache HBase — distributed NoSQL database for very large tables, often used with Hadoop. 
+Wikipedia
++1
+
+Other distributed DBMS: Apache Ignite, Couchbase, etc.
+
+Cloud Database
+
+A database hosted on a cloud computing platform (public cloud, private cloud, or hybrid), rather than on-premises servers. 
+TechTarget
++1
+
+From the user/app perspective, a cloud database “looks like” any other database (structured or unstructured), but the underlying infrastructure (storage, compute, replication, backups) is managed by the cloud provider. 
+TechTarget
++1
+
+Pros: reduces burden on internal IT/DBA for infrastructure management, often offers easy scalability, automated backups, high availability. 
+TechTarget
++2
+Wikipedia
++2
+
+Many cloud databases also support distributed architectures under the hood (sharding, replication across datacenters) — giving both benefits of distribution + cloud management convenience. 
+Wikipedia
++1
+
+Use cases:
+
+Applications needing quick deployment without heavy infra investment
+
+Startups or small teams that want to outsource DB operations
+
+Global applications requiring scalability, replication, geo-distribution, without needing to manage data centers themselves
+
+| Scenario / Application Type                                                                                   | Best Database Approach / Why                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Banking / Financial systems, ERP, Transactions, Strict data integrity                                         | Relational + Centralized (or distributed SQL) → ensures schema, strong consistency, ACID compliance                          |
+| Rapidly evolving data (e.g. user profiles with varying fields), content management, flexible product catalogs | NoSQL (document stores like MongoDB) → schema-less, flexible, easier to change data structure                                |
+| High-traffic web apps, social media platforms, content-heavy apps, big data ingestion                         | NoSQL distributed (e.g. Cassandra, HBase) → scalable horizontally, handle large write/read loads, fault tolerant             |
+| Global user base, apps needing low latency for geographically dispersed users                                 | Distributed or Cloud databases — distribute data across multiple nodes or regions for local access + high availability       |
+| Startups or small companies wanting minimal infra overhead                                                    | Cloud database services — avoid managing hardware; easy to scale as app grows                                                |
+| Analytics, logs, IoT data streams, time-series data, real-time analytics                                      | NoSQL wide-column or distributed databases (Cassandra, HBase) — optimized for large volumes, fast writes, horizontal scaling |
+
