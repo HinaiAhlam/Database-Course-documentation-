@@ -88,3 +88,32 @@ Require specialized knowledge (SQL, schema design).
 Can be slower for extremely large or unstructured data without proper indexing.
 
 May involve licensing costs (for some engines).
+
+
+
+Advantages of Using a DBMS
+
+
+                         ┌──────────────────────────┐
+                         │   ADVANTAGES OF A DBMS   │
+                         └─────────────┬────────────┘
+                                       │
+ ┌─────────────────────────────────────┼─────────────────────────────────────┐
+ │                                     │                                     │
+ ▼                                     ▼                                     ▼
+
+SECURITY                          INTEGRITY                             BACKUP
+🔒                                 ✔️                                   💾
+• Access control                  • Enforces rules & constraints        • Automated backups
+• Authentication                  • Ensures accuracy & consistency      • Point-in-time recovery
+• Data encryption                 • Prevents invalid data               • Disaster recovery support
+
+ ┌─────────────────────────────────────┼─────────────────────────────────────┐
+ │                                     │                                     │
+ ▼                                     ▼                                     ▼
+
+REDUNDANCY                        CONCURRENCY                        DATA SHARING
+📉                                🔁                                   🔗
+• Minimizes duplicate data        • Many users access data safely     • Centralized data repository
+• Centralized storage             • Locking & timing mechanisms       • Users access the same data
+• Efficient updates               • Prevents conflicts                • Improves collaboration
