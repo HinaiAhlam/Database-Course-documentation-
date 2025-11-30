@@ -513,3 +513,109 @@ F. Compliance Restrictions
 Some industries/countries require data sovereignty.
 
 Not all data may legally be stored in the cloud.
+
+
+
+
+Database Engines and Languages 
+What Is a Database Engine?
+
+A database engine (also called a database management system, or DBMS) is the core software component that:
+
+Stores, retrieves, and manages data
+
+Executes queries
+
+Handles indexing, transactions, locking, security, and performance optimizations
+
+Examples include:
+
+SQL Server
+
+MySQL
+
+Oracle Database
+
+PostgreSQL
+
+
+What Languages Do They Use?
+
+Database engines all use SQL (Structured Query Language) as their base query language, but most engines add their own dialects or extensions:
+| Database Engine | Main Query Language | Procedural / Extended Language                                 |
+| --------------- | ------------------- | -------------------------------------------------------------- |
+| **SQL Server**  | ANSI SQL            | **T-SQL** (Transact-SQL)                                       |
+| **MySQL**       | ANSI SQL            | **MySQL SQL dialect** + stored program features                |
+| **Oracle**      | ANSI SQL            | **PL/SQL**                                                     |
+| **PostgreSQL**  | ANSI SQL            | **PL/pgSQL** (plus support for others like PL/Python, PL/Perl) |
+
+
+
+Is There a Relationship Between the Engine and the Language?
+
+Yes.
+Each database engine has:
+
+A core SQL implementation → mostly standardized
+
+Vendor-specific features → implemented through engine-specific SQL dialects
+
+These dialects exist because engines differ in:
+
+Functions available
+
+Data types
+
+Stored procedure languages
+
+System features (security, indexing, transactions, etc.)
+
+Extensions (e.g., JSON support, spatial data)
+
+Example:
+
+SQL Server uses TOP 10
+
+MySQL uses LIMIT 10
+
+Oracle uses ROWNUM or newer FETCH FIRST 10 ROWS
+
+Same task, different syntax—because of the dialect.
+
+
+
+Can One Language Work Across Different Engines?
+
+Partially, yes—partially, no.
+
+✔ Yes, Standard SQL works across all engines
+
+Common operations such as:
+
+SELECT, INSERT, UPDATE, DELETE
+
+JOIN syntax
+
+Basic data types
+
+Constraints
+
+These are mostly portable.
+
+✖ But procedural / dialect-specific SQL does NOT work across engines
+
+T-SQL works only in SQL Server
+
+PL/SQL works only in Oracle
+
+PL/pgSQL works only in PostgreSQL
+
+MySQL’s procedural language runs only in MySQL
+
+✔/✖ Workarounds:
+
+Rewrite SQL queries for the target database
+
+Use frameworks/ORMs (e.g., Entity Framework, Hibernate, Django ORM) to abstract differences
+
+Use ANSI-standard SQL when portability is a priority
