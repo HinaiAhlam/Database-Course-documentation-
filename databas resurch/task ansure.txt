@@ -117,3 +117,90 @@ REDUNDANCY                        CONCURRENCY                        DATA SHARIN
 • Minimizes duplicate data        • Many users access data safely     • Centralized data repository
 • Centralized storage             • Locking & timing mechanisms       • Users access the same data
 • Efficient updates               • Prevents conflicts                • Improves collaboration
+
+
+
+
+
+Roles in a Database System
+
+1. System Analyst
+
+What they do:
+
+Study the business needs and processes of an organization.
+
+Determine what the database system should accomplish.
+
+Create requirements documents, process flow diagrams, and system specifications.
+
+Focus: Business requirements → System requirements.
+
+Output: Requirements for the database and applications, used by designers and developers.
+
+2. Database Designer
+
+What they do:
+
+Convert the requirements from the System Analyst into a conceptual and logical database model.
+
+Design entity-relationship (ER) diagrams, data models, constraints, relationships, normalization, etc.
+
+In some cases they also create the physical database design (indexing, partitions, storage).
+
+Focus: Data structure, data relationships, data integrity.
+
+Output: Database schema/design.
+ 3. Database Developer
+
+What they do:
+
+Implement the physical database based on the design.
+
+Write SQL scripts, stored procedures, triggers, functions, and database logic.
+
+Optimize queries and create indexes to improve performance.
+
+Focus: Building and coding the database.
+
+Output: The functioning database and database logic.
+
+4. DBA (Database Administrator)
+
+What they do:
+
+Maintain, secure, and manage the database system after it is built.
+
+Handle user accounts, permissions, backups, recovery, monitoring, and performance tuning.
+
+Ensure availability, reliability, and security of the data.
+
+Focus: Operations, maintenance, and administration.
+
+Output: Stable, secure, high-performing database environment.
+5. Application Developer
+
+What they do:
+
+Build the software applications that interact with the database.
+
+Write application logic using languages such as Java, Python, C#, JavaScript, etc.
+
+Use APIs, ORMs, and SQL queries to access and manipulate data.
+
+Focus: User-facing application and business logic.
+
+Output: Applications that read/write data from/to the database.
+6. BI (Business Intelligence) Developer
+
+What they do:
+
+Use the database to create reports, dashboards, analytics, and insights.
+
+Work with data warehouses, ETL processes, and visualization tools (Power BI, Tableau, SSIS, etc.).
+
+Transform raw data into meaningful information for decision-making.
+
+Focus: Analytics, reporting, dashboards, data warehousing.
+
+Output: Business insights and data-driven decision tools.
