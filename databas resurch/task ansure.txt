@@ -1,0 +1,90 @@
+1. Comparison Assignment
+Flat File Systems vs. Relational Databases
+1. Structure
+
+Flat File Systems
+
+Store data in simple files (e.g., CSV, TXT) with no inherent structure beyond rows and columns.
+
+Typically consist of a single table per file.
+
+No built-in schema enforcement; structure may vary between files.
+
+Relational Databases
+
+Store data in multiple interrelated tables with defined schemas.
+
+Use a formal data model with columns, data types, keys, and constraints.
+
+Support SQL for structured queries.
+ 
+2. Data Redundancy
+
+Flat File Systems
+
+High redundancy because data is often duplicated across files.
+
+Lack mechanisms to enforce consistency or avoid duplication.
+
+Relational Databases
+
+Minimized redundancy through normalization.
+
+Data stored once and referenced via keys, reducing inconsistencies.
+
+3. Relationships
+
+Flat File Systems
+
+No native relationship support.
+
+Any relationships must be manually handled in application logic.
+
+Relational Databases
+
+Built-in relationships using primary and foreign keys.
+
+Enforce referential integrity, cascading rules, and consistency.
+
+4. Example Usage
+
+Flat File Systems
+
+Configuration files.
+
+Simple logging or archival systems.
+
+Small datasets for lightweight applications.
+
+Import/export formats like CSV for data interchange.
+
+Relational Databases
+
+Enterprise systems (ERP, CRM).
+
+Financial systems.
+
+E-commerce platforms.
+
+Any system requiring complex queries or large-scale structured data. 
+5. Drawbacks
+
+Flat File Systems
+
+Difficult to manage at scale.
+
+High redundancy and inconsistency.
+
+No transaction support or concurrency control.
+
+Poor performance for complex queries.
+
+Relational Databases
+
+More complex to set up and maintain.
+
+Require specialized knowledge (SQL, schema design).
+
+Can be slower for extremely large or unstructured data without proper indexing.
+
+May involve licensing costs (for some engines).
